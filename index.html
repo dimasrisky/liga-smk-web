@@ -4,28 +4,547 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-        theme: {
-            fontFamily : {
-                'inter': ['Inter', 'sans-serif'],
-                'roboto': ['Roboto', 'sans-serif']
-            },
-            extend: {
-                colors: {
-                    'primary-yellow': '#facb3b',
-                    'primary-blue': '#3a10e5',
-                    'primary-dark-blue': '#090e23',
-                    'primary-light-blue': '#f0f3ff'
+            theme: {
+                fontFamily : {
+                    'inter': ['Inter', 'sans-serif'],
+                    'roboto': ['Roboto', 'sans-serif']
+                },
+                extend: {
+                    colors: {
+                        'primary-yellow': '#facb3b',
+                        'primary-blue': '#3a10e5',
+                        'primary-dark-blue': '#090e23',
+                        'primary-light-blue': '#f0f3ff',
+                        'primary-pink': '#fff0e5'
+                    }
                 }
             }
-        }
         }
     </script>
     <title>Liga SMK Web</title>
 </head>
 <body>
+    <!-- Navbar -->
+    <section id="navbar" class="w-screen py-[1.5rem]">
+        <nav class="w-[70vw] mx-auto flex justify-between items-center text-inter">
+            <img src="assets/logo-ligasmk-dark.png" alt="logo-liga-smk" class="w-[7rem]">
+            <div class="text-[0.8rem] flex flex-row gap-[2rem]">
+                <div class="flex items-center gap-2">
+                    <a href="#">Home</a>
+                    <img src="assets/icon-arrow-bottom.svg" alt="icon-arrow-bottom">
+                </div>
+                <div class="flex items-center gap-2">
+                    <a href="#">About Us</a>
+                    <img src="assets/icon-arrow-bottom.svg" alt="icon-arrow-bottom">
+                </div>
+                <div class="flex items-center gap-2">
+                    <a href="#">Kelas</a>
+                    <img src="assets/icon-arrow-bottom.svg" alt="icon-arrow-bottom">
+                </div>
+                <div class="flex items-center gap-2">
+                    <a href="#">Blog</a>
+                    <img src="assets/icon-arrow-bottom.svg" alt="icon-arrow-bottom">
+                </div>
+                <a href="#">Kontak</a>
+            </div>
+        </nav>
+    </section>
 
+    <!-- Hero Section -->
+    <section id="hero-section" class="bg-primary-light-blue w-screen h-[100vh] flex justify-center items-center">
+        <div class="w-[70%] mx-auto flex justify-between">
+            <div class="font-roboto">
+                <h1 class="font-semibold tracking-wider text-[3.5rem] leading-tight">Bergabunglah <br> dengan jutaan <br> orang dan <br> belajar hal baru</h1>
+                <p class="text-[1rem] opacity-60 my-[2rem]">Mengubah kehidupan, bisnis, dan bangsa melalui <br> transformasi talenta di bidang teknologi digital.</p>
+                <button type="button" class="bg-primary-blue text-white text-[0.8rem] font-thin flex justify-between items-center gap-[3rem] px-5 py-2 rounded-md">
+                    <p>Mulai Belajar</p>
+                    <img src="assets/icon-arrowlong-right.svg" alt="arrow">
+                </button>
+            </div>
+            <img src="assets/shape-diagram.png" alt="hero-image" class="w-[25rem]">
+        </div>
+    </section>
+
+    <!-- Keunggulan -->
+    <section id="Keunggulan" class="bg-primary-yellow w-screen py-[2rem]">
+        <div class="w-[70%] mx-auto flex justify-between">
+            <!-- 1 -->
+            <div class="flex items-center gap-[1rem]">
+                <img src="assets/icon-online-education.svg" class="w-[3.5rem]">
+                <div class="font-roboto">
+                    <h3 class="font-semibold">Membangun karir</h3>
+                    <p class="text-sm">Semua yang butuh kerja</p>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="flex items-center gap-[1rem]">
+                <img src="assets/icon-globe-handphone.svg" class="w-[3rem]">
+                <div class="font-roboto">
+                    <h3 class="font-semibold">Membangun karir</h3>
+                    <p class="text-sm">Semua yang butuh kerja</p>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="flex items-center gap-[1rem]">
+                <img src="assets/icon-online-education-laptop.svg" class="w-[3.5rem]">
+                <div class="font-roboto">
+                    <h3 class="font-semibold">Membangun karir</h3>
+                    <p class="text-sm">Semua yang butuh kerja</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses -->
+    <section id="courses" class="w-screen flex justify-center items-center my-[7rem]">
+        <div class="w-[70%]">
+            <!-- Pembelajaran Populer -->
+            <div class="font-roboto flex justify-between items-center">
+                <h1 class="text-[1.5rem] font-semibold">Pembelajaran Populer</h1>
+                <div class="flex font-semibold text-sm items-center gap-3 font-inter">
+                    <a href="#" class="py-2 px-5 shadow-2xl shadow-black">Javascript</a>
+                    <a href="#" class="opacity-60">Python</a>
+                    <a href="#" class="opacity-60">Web Developement</a>
+                    <a href="#" class="opacity-60">Art & Design</a>
+                    <a href="#" class="opacity-60">Business</a>
+                </div>
+            </div>
+            <!-- list Course -->
+            <div class="w-full flex flex-wrap justify-between items-center mt-6">
+                <!-- 1 -->
+                <div class="border w-[14rem]">
+                    <div class="relative">
+                        <img src="assets/course-1.png" alt="course-1">
+                        <img src="assets/new-orange.png" alt="new-yellow" class="absolute top-2 left-2">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xs text-primary-blue font-semibold">Alen Mask</p>
+                        <h3 class="font-semibold leading-5 text-sm mt-2">Why learn Intermediate SQL for Marketers?</h3>
+                        <div class="flex items-center gap-4 mt-6">
+                            <div class="flex gap-2 font-semibold text-[0.6rem]" >
+                                <img src="assets/icon-hamburger.svg" alt="beginner">
+                                <p>Beginner</p>
+                            </div>
+                            <div class="flex items-center gap-2 font-semibold text-[0.6rem]" >
+                                <img src="assets/icon-copy.svg" alt="lessons">
+                                <p>3 Lessons</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="border w-[14rem]">
+                    <div class="relative">
+                        <img src="assets/course-2.png" alt="course-1">
+                        <img src="assets/new-old-blue.png" alt="new-yellow" class="absolute top-2 left-2">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xs text-primary-blue font-semibold">Alen Mask</p>
+                        <h3 class="font-semibold leading-5 text-sm mt-2">Why learn Intermediate SQL for Marketers?</h3>
+                        <div class="flex items-center gap-4 mt-6">
+                            <div class="flex gap-2 font-semibold text-[0.6rem]" >
+                                <img src="assets/icon-hamburger.svg" alt="beginner">
+                                <p>Beginner</p>
+                            </div>
+                            <div class="flex items-center gap-2 font-semibold text-[0.6rem]" >
+                                <img src="assets/icon-copy.svg" alt="lessons">
+                                <p>3 Lessons</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="border w-[14rem]">
+                    <div class="relative">
+                        <img src="assets/course-3.png" alt="course-1">
+                        <img src="assets/new-pink.png" alt="new-yellow" class="absolute top-2 left-2">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xs text-primary-blue font-semibold">Alen Mask</p>
+                        <h3 class="font-semibold leading-5 text-sm mt-2">Why learn Intermediate SQL for Marketers?</h3>
+                        <div class="flex items-center gap-4 mt-6">
+                            <div class="flex gap-2 font-semibold text-[0.6rem]" >
+                                <img src="assets/icon-hamburger.svg" alt="beginner">
+                                <p>Beginner</p>
+                            </div>
+                            <div class="flex items-center gap-2 font-semibold text-[0.6rem]" >
+                                <img src="assets/icon-copy.svg" alt="lessons">
+                                <p>3 Lessons</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="border w-[14rem]">
+                    <div class="relative">
+                        <img src="assets/course-4.png" alt="course-1">
+                        <img src="assets/new-lightblue.png" alt="new-yellow" class="absolute top-2 left-2">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xs text-primary-blue font-semibold">Alen Mask</p>
+                        <h3 class="font-semibold leading-5 text-sm mt-2">Why learn Intermediate SQL for Marketers?</h3>
+                        <div class="flex items-center gap-4 mt-6">
+                            <div class="flex gap-2 font-semibold text-[0.6rem]" >
+                                <img src="assets/icon-hamburger.svg" alt="beginner">
+                                <p>Beginner</p>
+                            </div>
+                            <div class="flex items-center gap-2 font-semibold text-[0.6rem]" >
+                                <img src="assets/icon-copy.svg" alt="lessons">
+                                <p>3 Lessons</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full flex flex-wrap justify-between items-center mt-6">
+                <!-- 5 -->
+                <div class="border w-[14rem]">
+                    <div class="relative">
+                        <img src="assets/course-5.png" alt="course-1">
+                        <img src="assets/new-orange.png" alt="new-yellow" class="absolute top-2 left-2">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xs text-primary-blue font-semibold">Alen Mask</p>
+                        <h3 class="font-semibold leading-5 text-sm mt-2">Why learn Intermediate SQL for Marketers?</h3>
+                        <div class="flex items-center gap-4 mt-6">
+                            <div class="flex gap-2 font-semibold text-[0.6rem]" >
+                                <img src="assets/icon-hamburger.svg" alt="beginner">
+                                <p>Beginner</p>
+                            </div>
+                            <div class="flex items-center gap-2 font-semibold text-[0.6rem]" >
+                                <img src="assets/icon-copy.svg" alt="lessons">
+                                <p>3 Lessons</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="border w-[14rem]">
+                    <div class="relative">
+                        <img src="assets/course-6.png" alt="course-1">
+                        <img src="assets/new-old-blue.png" alt="new-yellow" class="absolute top-2 left-2">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xs text-primary-blue font-semibold">Alen Mask</p>
+                        <h3 class="font-semibold leading-5 text-sm mt-2">Why learn Intermediate SQL for Marketers?</h3>
+                        <div class="flex items-center gap-4 mt-6">
+                            <div class="flex gap-2 font-semibold text-[0.6rem]" >
+                                <img src="assets/icon-hamburger.svg" alt="beginner">
+                                <p>Beginner</p>
+                            </div>
+                            <div class="flex items-center gap-2 font-semibold text-[0.6rem]" >
+                                <img src="assets/icon-copy.svg" alt="lessons">
+                                <p>3 Lessons</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="border w-[14rem]">
+                    <div class="relative">
+                        <img src="assets/course-7.png" alt="course-1">
+                        <img src="assets/new-pink.png" alt="new-yellow" class="absolute top-2 left-2">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xs text-primary-blue font-semibold">Alen Mask</p>
+                        <h3 class="font-semibold leading-5 text-sm mt-2">Why learn Intermediate SQL for Marketers?</h3>
+                        <div class="flex items-center gap-4 mt-6">
+                            <div class="flex gap-2 font-semibold text-[0.6rem]" >
+                                <img src="assets/icon-hamburger.svg" alt="beginner">
+                                <p>Beginner</p>
+                            </div>
+                            <div class="flex items-center gap-2 font-semibold text-[0.6rem]" >
+                                <img src="assets/icon-copy.svg" alt="lessons">
+                                <p>3 Lessons</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="border w-[14rem]">
+                    <div class="relative">
+                        <img src="assets/course-8.png" alt="course-1">
+                        <img src="assets/new-lightblue.png" alt="new-yellow" class="absolute top-2 left-2">
+                    </div>
+                    <div class="p-5">
+                        <p class="text-xs text-primary-blue font-semibold">Alen Mask</p>
+                        <h3 class="font-semibold leading-5 text-sm mt-2">Why learn Intermediate SQL for Marketers?</h3>
+                        <div class="flex items-center gap-4 mt-6">
+                            <div class="flex gap-2 font-semibold text-[0.6rem]" >
+                                <img src="assets/icon-hamburger.svg" alt="beginner">
+                                <p>Beginner</p>
+                            </div>
+                            <div class="flex items-center gap-2 font-semibold text-[0.6rem]" >
+                                <img src="assets/icon-copy.svg" alt="lessons">
+                                <p>3 Lessons</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership -->
+    <section id="membership" class="my-[7rem]">
+        <div class="w-screen bg-primary-pink">
+            <div class="w-[70%] mx-auto flex items-center justify-between font-roboto py-8">
+                <img src="assets/membership-image.png" alt="membership-image">
+                <h1 class="font-semibold text-4xl">Dapatkan membership Pro <br> GRATIS untuk kelas kamu.</h1>
+                <button class="px-5 py-2 bg-primary-blue text-white text-[0.7rem] rounded-sm">Lihat semua kelas.</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kategori -->
+    <section id="kategori" class="my-[7rem]">
+        <div class="w-[70%] mx-auto font-roboto">
+            <h1 class="font-semibold text-2xl text-center">Kategori Populer</h1>
+            <!-- 1/1 -->
+            <div class="flex justify-between mt-[2rem]">
+                <!-- 1 -->
+                <div class="flex items-center gap-3 shadow-xl rounded-md w-[13rem] py-4 px-6">
+                    <div class="relative">
+                        <div class="w-[4rem] h-[4rem] rounded-full bg-primary-light-blue"></div>
+                        <img src="assets/icon-chemical.svg" alt="chemical" class="absolute top-3 right-3">
+                    </div>
+                    <div class="font-inter gap-3">
+                        <h3 class="text-md font-semibold">kimia</h3>
+                        <p class="text-xs">2 kelas</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="flex items-center gap-3 shadow-xl rounded-md w-[13rem] py-4 px-6">
+                    <div class="relative">
+                        <div class="w-[4rem] h-[4rem] rounded-full bg-primary-light-blue"></div>
+                        <img src="assets/icon-calendar.svg" alt="icon-calendar" class="absolute top-3 right-3">
+                    </div>
+                    <div class="font-inter gap-3">
+                        <h3 class="text-md font-semibold">Managemen</h3>
+                        <p class="text-xs">2 kelas</p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="flex items-center gap-3 shadow-xl rounded-md w-[13rem] py-4 px-6">
+                    <div class="relative">
+                        <div class="w-[4rem] h-[4rem] rounded-full bg-primary-light-blue"></div>
+                        <img src="assets/icon-pencil-ruler.svg" alt="icon-pencil-ruler" class="absolute top-3 right-3">
+                    </div>
+                    <div class="font-inter gap-3">
+                        <h3 class="text-md font-semibold">Seni budaya</h3>
+                        <p class="text-xs">2 kelas</p>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="flex items-center gap-3 shadow-xl rounded-md w-[13rem] py-4 px-6">
+                    <div class="relative">
+                        <div class="w-[4rem] h-[4rem] rounded-full bg-primary-light-blue"></div>
+                        <img src="assets/icon-briefcase.svg" alt="briicon-briefcase.svg" class="absolute top-3 right-3">
+                    </div>
+                    <div class="font-inter gap-3">
+                        <h3 class="text-md font-semibold">Bisnis</h3>
+                        <p class="text-xs">2 kelas</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 1/2 -->
+            <div class="flex justify-between mt-[2rem]">
+                <!-- 5 -->
+                <div class="flex items-center gap-3 shadow-xl rounded-md w-[13rem] py-4 px-6">
+                    <div class="relative">
+                        <div class="w-[4rem] h-[4rem] rounded-full bg-primary-light-blue"></div>
+                        <img src="assets/icon-science.svg" alt="icon-science" class="absolute top-3 right-3">
+                    </div>
+                    <div class="font-inter gap-3">
+                        <h3 class="text-md font-semibold">Astrologi</h3>
+                        <p class="text-xs">2 kelas</p>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="flex items-center gap-3 shadow-xl rounded-md w-[13rem] py-4 px-6">
+                    <div class="relative">
+                        <div class="w-[4rem] h-[4rem] rounded-full bg-primary-light-blue"></div>
+                        <img src="assets/icon-rocket.png" alt="rocicon-rocket.png" class="absolute top-3 right-3">
+                    </div>
+                    <div class="font-inter gap-3">
+                        <h3 class="text-md font-semibold">SEO</h3>
+                        <p class="text-xs">2 kelas</p>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="flex items-center gap-3 shadow-xl rounded-md w-[13rem] py-4 px-6">
+                    <div class="relative">
+                        <div class="w-[4rem] h-[4rem] rounded-full bg-primary-light-blue"></div>
+                        <img src="assets/icon-space.svg" alt="spicon-space.svg" class="absolute top-3 right-3">
+                    </div>
+                    <div class="font-inter gap-3">
+                        <h3 class="text-md font-semibold">Kosmologi</h3>
+                        <p class="text-xs">2 kelas</p>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="flex items-center gap-3 shadow-xl rounded-md w-[13rem] py-4 px-6">
+                    <div class="relative">
+                        <div class="w-[4rem] h-[4rem] rounded-full bg-primary-light-blue"></div>
+                        <img src="assets/icon-microscope.svg" alt="micicon-microscope.svg" class="absolute top-3 right-3">
+                    </div>
+                    <div class="font-inter gap-3">
+                        <h3 class="text-md font-semibold">Biologi</h3>
+                        <p class="text-xs">2 kelas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-3 mt-[3rem] justify-center text-primary-blue font-bold text-xs">
+                <a href="#">Explore All Courses</a>
+                <img src="assets/icon-double-next.svg" alt="arrow">
+            </div>
+        </div>
+    </section>
+
+    <!-- try business -->
+    <section id="try-business" class="my-[7rem]">
+        <div class="w-[70%] mx-auto bg-primary-light-blue">
+            <div class="flex justify-between p-12 gap-8">
+                <img src="assets/business-image.png" alt="">
+                <div class="font-roboto flex flex-col justify-between items-start">
+                    <h1 class="text-[2.5rem] font-semibold">Tingkatkan skill tim Anda</h1>
+                    <p class="text-[1rem]">Berikan tim Anda pengetahuan, pengalaman, dan keyakinan <br> yang mereka butuhkan untuk mengatasi setiap masalah. <br>Kami ingin menciptakan dunia dimana siapa pun dapat <br> membangun sesuatu yang bermakna </p>
+                    <button class="px-7 py-2 bg-primary-blue text-white text-xs rounded-sm">Try For Business</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event -->
+    <section id="event" class="my-[7rem]">
+        <div class="w-[70%] mx-auto font-roboto">
+            <h1 class="font-semibold text-center text-2xl mb-[3rem]">Event Sedang berlangsung di dekatmu</h1>
+            <div class="flex justify-between gap-5">
+                <!-- 1 -->
+                <div class="w-[20rem]">
+                    <img src="assets/event-1.png" alt="event-1">
+                    <div class="flex gap-3">
+                        <div class="font-semibold text-primary-blue flex flex-col items-center">
+                            <h1 class="text-[1.3rem]">21</h1>
+                            <h1 class="text-[50%]">March</h1>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <img src="assets/icon-location.svg" alt="location" >
+                            <h1 class="text-[0.7rem] text-primary-blue">North Caroline United States</h1>
+                        </div>
+                    </div>
+                    <h1 class="font-semibold text-[1.2rem]">Linear Regression in Python: <br> Introduction to Simple Linear</h1>
+                </div>
+                <!-- 2 -->
+                <div class="w-[20rem]">
+                    <img src="assets/event-2.png" alt="event-2">
+                    <div class="flex gap-3">
+                        <div class="font-semibold text-primary-blue flex flex-col items-center">
+                            <h1 class="text-[1.3rem]">21</h1>
+                            <h1 class="text-[50%]">March</h1>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <img src="assets/icon-location.svg" alt="location" >
+                            <h1 class="text-[0.7rem] text-primary-blue">North Caroline United States</h1>
+                        </div>
+                    </div>
+                    <h1 class="font-semibold text-[1.2rem]">Linear Regression in Python: <br> Introduction to Simple Linear</h1>
+                </div>
+                <!-- 3 -->
+                <div class="w-[20rem]">
+                    <img src="assets/event-3.png" alt="event-3">
+                    <div class="flex gap-3">
+                        <div class="font-semibold text-primary-blue flex flex-col items-center">
+                            <h1 class="text-[1.3rem]">21</h1>
+                            <h1 class="text-[50%]">March</h1>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <img src="assets/icon-location.svg" alt="location" >
+                            <h1 class="text-[0.7rem] text-primary-blue">North Caroline United States</h1>
+                        </div>
+                    </div>
+                    <h1 class="font-semibold text-[1.2rem]">Linear Regression in Python: <br> Introduction to Simple Linear</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <footer class="w-screen bg-primary-dark-blue font-roboto text-white">
+            <div class="w-[70%] mx-auto">
+                <div class="flex justify-between py-[3rem]">
+                    <!-- description -->
+                    <div class="text-white flex flex-col gap-8 items-start">
+                        <img src="assets/logo-ligasmk-white.png" alt="logo-liga-smk" class="w-[8rem]">
+                        <p class="text-xs opacity-60">Mengubah kehidupan, bisnis, dan bangsa <br>melalui transformasi talenta di bidang <br> teknologi digital</p>
+                        <div class="flex gap-5">
+                            <a href="#">
+                                <img src="assets/icon-facebook-white.svg" alt="icon-facebook-white">
+                            </a>
+                            <a href="#">
+                                <img src="assets/icon-twitter-white.svg" alt="icon-twitter-white">
+                            </a>
+                            <a href="#">
+                                <img src="assets/icon-linkedin-white.svg" alt="icon-linkedin-white">
+                            </a>
+                            <a href="#">
+                                <img src="assets/icon-youtube-white.svg" alt="icon-youtube-white">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- resources -->
+                    <div class="flex flex-col gap-8">
+                        <h1 class="font-semibold text-lg">Resources</h1>
+                        <div class="opacity-60 flex flex-col mt-2 text-xs gap-3">
+                            <a href="#">Build Career</a>
+                            <a href="#">Explore Subjects</a>
+                            <a href="#">gain a Skill</a>
+                        </div>
+                    </div>
+                    <!-- Support -->
+                    <div class="flex flex-col gap-8">
+                        <h1 class="font-semibold text-lg">Support</h1>
+                        <div class="opacity-60 flex flex-col mt-2 text-xs gap-3">
+                            <a href="#">Web Developement</a>
+                            <a href="#">Data Science</a>
+                            <a href="#">Machine Learning</a>
+                            <a href="#">Developer Tools</a>
+                            <a href="#">Web Design</a>
+                        </div>
+                    </div>
+                    <!-- Download -->
+                    <div class="flex flex-col gap-8">
+                        <h1 class="font-semibold text-lg">Support</h1>
+                        <div class="flex flex-col mt-2 text-xs gap-3">
+                            <a href="#" class="bg-white px-6 py-3 rounded-lg">
+                                <img src="assets/logo-appstore.png" alt="logo-appstore">
+                            </a>
+                            <a href="#" class="bg-white px-6 py-3 rounded-lg">
+                                <img src="assets/logo-googleplay.png" alt="logo-googleplay">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t flex justify-between items-center opacity-60 p-5">
+                    <div class="flex text-xs gap-5">
+                        <a href="#">Site Map</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Condition</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Forums</a>
+                    </div>
+                    <p class="text-xs">Liga SMK 2022</p>
+                </div>
+            </div>
+        </footer>
+    </section>
 </body>
 </html>
