@@ -22,19 +22,6 @@ ol, ul {
   list-style: none;
 }
 
-img {
-  max-width: 100%;
+img { 
   height: auto;
-}
-
-/* Start Project */
-
-/* Initialize variabel */
-:root{
-    --primary-yellow: #facb3b;
-    --primary-blue: #3a10e5;
-    --primary-dark-blue: #090e23;
-    --primary-light-blue: #f0f3ff;
-    --inter: 'Inter', sans-serif;
-    --roboto: 'Roboto', sans-serif;
 }
